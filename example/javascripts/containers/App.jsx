@@ -9,6 +9,7 @@ import {
   updateDangerouslyAllowHTML,
   showNotification
 } from '../actions';
+import PropTypes from 'prop-types';
 
 function App(props) {
   const { message, level, autoClose, autoCloseDelay, dangerouslyAllowHTML } = props;
@@ -98,17 +99,17 @@ function App(props) {
 }
 
 App.propTypes = {
-  message: React.PropTypes.string.isRequired,
-  level: React.PropTypes.string.isRequired,
-  autoClose: React.PropTypes.bool.isRequired,
-  autoCloseDelay: React.PropTypes.number.isRequired,
-  dangerouslyAllowHTML: React.PropTypes.bool.isRequired,
-  onUpdateMessage: React.PropTypes.func.isRequired,
-  onUpdateLevel: React.PropTypes.func.isRequired,
-  onUpdateAutoClose: React.PropTypes.func.isRequired,
-  onUpdateAutoCloseDelay: React.PropTypes.func.isRequired,
-  onUpdateDangerouslyAllowHTML: React.PropTypes.func.isRequired,
-  onShowNotification: React.PropTypes.func.isRequired
+  message: PropTypes.string.isRequired,
+  level: PropTypes.string.isRequired,
+  autoClose: PropTypes.bool.isRequired,
+  autoCloseDelay: PropTypes.number.isRequired,
+  dangerouslyAllowHTML: PropTypes.bool.isRequired,
+  onUpdateMessage: PropTypes.func.isRequired,
+  onUpdateLevel: PropTypes.func.isRequired,
+  onUpdateAutoClose: PropTypes.func.isRequired,
+  onUpdateAutoCloseDelay: PropTypes.func.isRequired,
+  onUpdateDangerouslyAllowHTML: PropTypes.func.isRequired,
+  onShowNotification: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => state.example;

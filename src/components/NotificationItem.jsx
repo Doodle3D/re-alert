@@ -1,5 +1,6 @@
 import React from 'react';
 import { NOTIFICATION_INFORMATION, NOTIFICATION_SUCCESS, NOTIFICATION_WARNING, NOTIFICATION_ERROR } from '../constants';
+import PropTypes from 'prop-types';
 
 function NotificationItem(props) {
   let classes = '';
@@ -33,11 +34,11 @@ function NotificationItem(props) {
 }
 
 NotificationItem.propTypes = {
-  id: React.PropTypes.number.isRequired,
-  level: React.PropTypes.string.isRequired,
-  message: React.PropTypes.string.isRequired,
-  dangerouslyAllowHTML: React.PropTypes.bool,
-  onClose: React.PropTypes.func.isRequired
+  id: PropTypes.number.isRequired,
+  level: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  dangerouslyAllowHTML: PropTypes.bool,
+  onClose: PropTypes.func.isRequired
 };
 
 export default NotificationItem;

@@ -4,6 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { removeNotification } from '../actions';
 import NotificationItem from '../components/NotificationItem';
 import '../stylesheets/notifications.css';
+import PropTypes from 'prop-types';
 
 export class NotificationSystem extends React.Component {
   constructor(props) {
@@ -40,14 +41,14 @@ export class NotificationSystem extends React.Component {
 }
 
 NotificationSystem.propTypes = {
-  notifications: React.PropTypes.arrayOf(React.PropTypes.shape({
-    id: React.PropTypes.number.isRequired,
-    level: React.PropTypes.string.isRequired,
-    message: React.PropTypes.string.isRequired
+  notifications: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    level: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
   })).isRequired,
-  customClassName: React.PropTypes.string,
-  dangerouslyAllowHTML: React.PropTypes.bool,
-  onCloseNotification: React.PropTypes.func.isRequired
+  customClassName: PropTypes.string,
+  dangerouslyAllowHTML: PropTypes.bool,
+  onCloseNotification: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => ({
